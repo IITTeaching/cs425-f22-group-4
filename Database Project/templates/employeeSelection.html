@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+
+    </head>
+    <style>
+        .button3{
+        top: 500px;
+        left: 1020px;
+        height: 200px;
+        width: 350px;
+        }
+        div.h2{
+        position:fixed;
+        right:1150px;
+        top:180px;
+        font-size: 45px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+        }
+
+    </style>
+    <body>
+    <div class="h2"><strong>Employee Selection</strong></div>
+    <form action="/managerSignIn" method="POST">
+            <button type="submit" class="button button1" name="login" value="manager"><strong>Manager Login</strong></button>
+    </form>
+    <form action="/tellerSignIn" method="POST">
+            <button type="submit" class="button button2" name="login" value="teller"><strong>Teller Login</strong></button>
+    </form>
+    <form action="/loanspecialistSignIn" method="POST">
+        <button type="submit" class="button button3" name="login" value="loanspecialist"><strong>LoanSpecialist Login</strong></button>
+    </form>
+        
+    </body>
+</html>
+{% endblock %}
