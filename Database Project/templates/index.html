@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<style>
+        div#banner1{position: fixed;
+            background-color:black;
+            height:35px;
+            width: 100%;
+            top:0px;
+            left:0px;
+            padding-left: 650px;
+            padding-top: 5px;
+            color: white;
+            font-size: 16px;
+            z-index: 90;}
+           
+        div#banner2{position: fixed;
+            background-color:#5566b1;
+            height:100px;
+            width: 100%;
+            padding-left: 20px;
+            padding-top: 20px;
+            top:35px;
+            left:0px;
+            color: black;
+            font-size: 55px;
+            z-index: 90;}
+        div#banner3{position: fixed;
+            background-color:black;
+            height:35px;
+            width: 100%;
+            top: 135px;
+            left:0px;
+            color: white;
+            font-size: 16px;
+            z-index: 90;}
+        a:hover{color: white; font-size: 17px;
+        }
+        .button{position:absolute;
+        background-color:#4161b8; 
+        color: black; 
+        border-radius: 10px;
+        box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+        font-size: 30px;
+        }
+        .button:hover{background-color: #c5c18b;
+        }
+        .button1{position:absolute; 
+         top: 500px;
+        left: 450px;
+        height: 200px;
+        width: 350px;
+        }
+        .button1:hover{background-color: #c5c18b;
+        }
+        .button2{position:absolute; 
+         top: 500px;
+        right: 650px;
+        height: 200px;
+        width: 350px;
+        }
+        .button2:hover{background-color: #c5c18b;
+        }
+        div.h1{
+        position:fixed;
+        left:800px;
+        top:180px;
+        font-size: 45px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0);   
+        }
+
+</style>
+<body style="background-color:rgb(37, 131, 131); width:100%; height:1000px; background-repeat: no-repeat; overflow: auto;">
+    <div id="banner1"></div>
+    <div id="banner2" href="/index.html"><strong>DB Banking</strong></div>
+    <div id="banner3"></div>
+{% block content %}
+<div class="h1"><strong>Welcome To DB Banking! Please Login</strong></div>
+<form action="/customerLogin" method="POST">
+        <button type="submit" class="button button1" name="login" value="customer"><strong>Customer Login</strong></button>
+</form>
+<form action="/employeeLogin" method="POST">
+        <button type="submit" class="button button2" name="login" value="employee"><strong>Employee Login</strong></button>
+</form>
+{% endblock %}
+</body>
+</html>
