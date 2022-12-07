@@ -1,0 +1,88 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+
+    </head>
+    <style>
+        div.h2{
+        position:fixed;
+        right:1210px;
+        top:180px;
+        font-size: 60px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+        }
+        div.h5{
+        position:fixed;
+        right:1210px;
+        top:300px;
+        font-size: 40px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+        }
+        div.h3{
+        position:fixed;
+        left:1350px;
+        top:450px;
+        font-size: 40px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+
+        }
+        div.h4{
+        position:fixed;
+        left:550px;
+        top:450px;
+        font-size: 40px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+
+        }
+        .acct{
+            position: fixed;
+            top: 500px;
+            left: 1400px;
+            height: 50px;
+            width: 400px;
+            font-size: 18pt;
+        }
+        .youracct{
+            position: fixed;
+            top: 350px;
+            left: 950px;
+            height: 50px;
+            width: 400px;
+            font-size: 18pt;
+        }
+        .amount{
+            position: fixed;
+            top: 500px;
+            left: 500px;
+            height: 50px;
+            width: 400px;
+            font-size: 18pt;
+        }
+        .buttontransfer{
+        top: 750px;
+        right: 1250px;
+        height: 100px;
+        width: 250px;
+        }
+
+    </style>
+    <body>
+        <div class="h2"><strong>Manager Deposit</strong></div>
+        <div class="h3"><strong>CLient Account Number</strong></div>
+        <div class="h4"><strong>Dollar Amount</strong></div>
+
+        <form action="/managerDepositSuccess" method="POST">
+            <input type="text" class="acct" id="acct" name="clientacct"><br><br>
+            <input type="text" class="amount" id="amt" name="amt"><br><br>
+            <button type="submit" class="button buttontransfer">
+                <a style="text-decoration: none">Deposit!</a>
+            </button>
+        </form>
+    </body>
+</html>
+{% endblock %}
