@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+
+    </head>
+    <style>
+        div.h2{
+        position:fixed;
+        right:800px;
+        top:180px;
+        font-size: 60px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+        }
+        div.h3{
+            position:fixed;
+            right:1165px;
+            top:450px;
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:black;
+        }
+        .buttonDelete{
+        top: 750px;
+        right: 1250px;
+        height: 100px;
+        width: 250px;
+        }
+        .ssnbox{
+            position: fixed;
+            top: 500px;
+            left: 1000px;
+            height: 50px;
+            width: 400px;
+            font-size: 18pt;
+        }
+
+    </style>
+    <body>
+        <div class="h2"><strong>Are You Sure You Would Like to Delete?</strong></div>
+        <div class="h3"><strong>Please Enter Account Number of Client</strong></div>
+        <form action="/tellerDeleteSuccess" method="POST">
+            <input type="text" class="ssnbox" id="ssn" name="acctdelete"><br><br>
+            <button type="submit" class="button buttonDelete" name="delete">
+                <a style="text-decoration: none">Delete!</a>
+            </button>
+
+        </form>
+    </body>
+</html>
+{% endblock %}

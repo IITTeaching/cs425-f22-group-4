@@ -1,0 +1,57 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+
+    </head>
+    <style>
+        div.h2{
+        position:fixed;
+        right:1050px;
+        top:180px;
+        font-size: 45px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+        }
+        div.h3{
+        position:fixed;
+        left:150px;
+        top:180px;
+        font-size: 28px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0);
+        background-color: aliceblue; 
+        }
+        .button3{
+        top: 500px;
+        left: 1020px;
+        height: 200px;
+        width: 350px;
+        }
+        div.h4{
+        position:fixed;
+        right:1250px;
+        top:400px;
+        font-size: 35px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0);
+        background-color: chartreuse; 
+        }
+
+    </style>
+    <body>
+        <div class="h2"><strong>Welcome {{name}}!</strong></div>
+        <div class="h3"><strong>Teller Home</strong></div>
+        <div class="h4"><strong>Teller Options:</strong></div>
+        <form action="/tellerDeposit" method="POST">
+            <button type="submit" class="button button1" name="empl" value="manager"><strong>Deposit</strong></button>
+        </form>
+        <form action="/tellerDelete" method="POST">
+            <button type="submit" class="button button2" name="brl" value="teller"><strong>Delete An Account</strong></button>
+        </form>
+        <form action="/tellerWithdrawal" method="POST">
+        <button type="submit" class="button button3" name="cusl" value="loanspecialist"><strong>Withdraw</strong></button>
+        </form>
+    </body>
+</html>
+{% endblock %}

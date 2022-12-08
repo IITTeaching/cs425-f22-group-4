@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+
+    </head>
+    <style>
+        div.h2{
+        position:fixed;
+        right:1210px;
+        top:180px;
+        font-size: 60px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+        }
+        div.h3{
+        position:fixed;
+        right:1150px;
+        top:350px;
+        font-size: 45px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+        }
+        .buttonhome{
+        top: 750px;
+        right: 1250px;
+        height: 100px;
+        width: 250px;
+        }
+
+    </style>
+    <body>
+        <div class="h2"><strong>Success!</strong></div>
+        <div class="h3"><strong>Account Deleted</strong></div>
+        <form action="/tellerSignIn" method="POST">
+            <button type="submit" class="button buttonhome">
+                <a style="text-decoration: none">Back to Home</a>
+            </button>
+
+        </form>
+    </body>
+</html>
+{% endblock %}
