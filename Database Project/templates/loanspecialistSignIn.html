@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+
+    </head>
+    <style>
+        div.h2{
+        position:fixed;
+        right:1125px;
+        top:180px;
+        font-size: 45px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+        }
+        div.h3{
+            position:fixed;
+            right:1165px;
+            top:450px;
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:black;
+        }
+        .ssnbox{
+            position: fixed;
+            top: 500px;
+            left: 1000px;
+            height: 50px;
+            width: 400px;
+            font-size: 18pt;
+        }
+        .buttonssn{
+        top: 750px;
+        right: 1250px;
+        height: 100px;
+        width: 250px;
+        }
+
+    </style>
+    <body>
+        <div class="h2"><strong>Loan Specialist Login</strong></div>
+        <div class="h3"><strong>Please Enter Social Security</strong></div>
+        <form action="/customerHP" method="POST">
+            <input type="text" class="ssnbox" id="ssn" name="ssnlogin"><br><br>
+            <button type="submit" class="button buttonssn">
+                <a style="text-decoration: none">Sign In!</a>
+            </button>
+        </form>
+
+    </body>
+</html>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+
+    </head>
+    <style>
+        div.h2{
+        position:fixed;
+        right:1100px;
+        top:180px;
+        font-size: 45px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+        }
+        div.h3{
+        position:fixed;
+        left:150px;
+        top:180px;
+        font-size: 28px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0);
+        background-color: aliceblue; 
+        }
+        div.h4{
+        position:fixed;
+        right:1250px;
+        top:400px;
+        font-size: 35px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0);
+        background-color: chartreuse; 
+        }
+        .button3{
+        top: 500px;
+        left: 1020px;
+        height: 200px;
+        width: 350px;
+        }
+        .button4{
+        top: 800px;
+        left: 450px;
+        height: 200px;
+        width: 350px;
+        }
+        .button5{
+        top: 800px;
+        left: 1020px;
+        height: 200px;
+        width: 350px;
+        }
+        .button6{
+        top: 800px;
+        right: 650px;
+        height: 200px;
+        width: 350px;
+        }
+
+    </style>
+    <body>
+        <div class="h2"><strong>Welcome {{name}}!</strong></div>
+        <div class="h3"><strong>Manager Home</strong></div>
+        <div class="h4"><strong>Manager Options:</strong></div>
+        <form action="/employeeLookup" method="POST">
+            <button type="submit" class="button button1" name="empl" value="manager"><strong>Employee Lookup</strong></button>
+        </form>
+        <form action="/branchLookup" method="POST">
+            <button type="submit" class="button button2" name="brl" value="teller"><strong>Branch Lookup</strong></button>
+        </form>
+        <form action="/customerLookup" method="POST">
+        <button type="submit" class="button button3" name="cusl" value="loanspecialist"><strong>Customer Lookup</strong></button>
+        </form>
+        <form action="/accountsWorth" method="POST">
+            <button type="submit" class="button button4" name="login" value="manager"><strong>Accounts Worth</strong></button>
+        </form>
+        <form action="/managerDeposit" method="POST">
+            <button type="submit" class="button button5" name="login" value="teller"><strong>Deposit</strong></button>
+        </form>
+        <form action="/managerWithdrawal" method="POST">
+        <button type="submit" class="button button6" name="login" value="loanspecialist"><strong>Withdrawal</strong></button>
+        </form>
+
+
+    </body>
+</html>
+{% endblock %}

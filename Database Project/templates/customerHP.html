@@ -1,0 +1,117 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+
+    </head>
+    <style>
+        div.h2{
+        position:fixed;
+        right:1100px;
+        top:180px;
+        font-size: 60px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+        }
+        div.h3{
+        position:fixed;
+        right:2250px;
+        top:180px;
+        font-size: 35px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0); 
+        }
+        div.h4{
+        position:fixed;
+        right:1300px;
+        top:220px;
+        font-size: 35px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0);
+        background-color: #5566b1; 
+        }
+        div.h5{
+        position:fixed;
+        right:1200px;
+        top:550px;
+        font-size: 45px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0);
+        background-color: #5566b1;
+        }
+        div.h6{
+        position:fixed;
+        right:1200px;
+        top:650px;
+        font-size: 45px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0);
+        background-color: #5566b1; 
+        }
+        div.h7{
+        position:fixed;
+        right:1200px;
+        top:750px;
+        font-size: 45px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(0, 0, 0);
+        background-color: #5566b1; 
+        }
+        a:hover{color: white; font-size: 17px;
+        }
+        .button5{position:absolute;
+        background-color:#4161b8; 
+        color: black; 
+        border-radius: 10px;
+        box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+        font-size: 30px;
+        }
+        .button5:hover{background-color: #c5c18b;
+        }
+        .button5{position:absolute; 
+         top: 250px;
+        right: 350px;
+        height: 120px;
+        width: 200px;
+        }
+        .button5:hover{background-color: #c5c18b;
+        }
+        .button6{position:absolute;
+        background-color:#4161b8; 
+        color: black; 
+        border-radius: 10px;
+        box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+        font-size: 30px;
+        }
+        .button6:hover{background-color: #c5c18b;
+        }
+        .button6{position:absolute; 
+         top: 1000px;
+        right: 350px;
+        height: 120px;
+        width: 200px;
+        }
+        .button6:hover{background-color: #c5c18b;
+        }
+
+
+    </style>
+    <body>
+        <div class="h2"><strong>Welcome {{name}}!</strong></div>
+        <div class="h3"><strong>{{address}}</strong></div>
+        <div class="h5"><strong>Account Balance: ${{balance}} </strong></div>
+        <div class="h6"><strong>Account Type: {{type}}</strong></div>
+        <div class="h7"><strong>Account Number: {{accountnum}} </strong></div>
+        <form action="/customerTransfer" method="POST">
+            <button type="submit" class="button button5" name="transfer" value="transfer"><strong>Transfer Funds</strong></button>
+        </form>
+        <form action="/customerDelete" method="POST">
+            <button type="submit" class="button button6" name="delete" value="delete"><strong>Delete Account</strong></button>
+        </form>
+
+
+      
+    
+    </body>
+</html>
+{% endblock %}
